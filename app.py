@@ -2,6 +2,18 @@ import streamlit as st
 import pandas as pd
 import plotly.express as px # type: ignore
 
+# --- NOVO CÓDIGO AQUI ---
+st.title('Dashboard Interativo de Anúncios de Vendas de Carros')
+st.write('Este dashboard interativo foi desenvolvido para explorar e visualizar dados de anúncios de vendas de veículos. Utilizando a biblioteca Streamlit, ele oferece uma interface amigável para que usuários possam analisar as características dos carros anunciados de maneira dinâmica.')
+st.title('Com este aplicativo, você pode:')
+st.write('''
+Visualizar a distribuição da quilometragem: Entenda a frequência de veículos por diferentes faixas de quilometragem através de um histograma intuitivo.
+Analisar a relação entre preço e quilometragem: Explore como o preço dos veículos se comporta em relação à sua quilometragem, identificando possíveis padrões ou tendências por meio de um gráfico de dispersão.
+O aplicativo é alimentado por um conjunto de dados de veículos e busca fornecer insights rápidos sobre o mercado de carros usados, auxiliando na compreensão das variáveis que influenciam os preços e a disponibilidade.
+Para começar, clique nos botões abaixo para gerar os gráficos desejados.
+''')
+
+car_data = pd.read_csv('vehicles.csv')
 car_data = pd.read_csv('vehicles.csv')
 
 hist_button = st.button('Criar histograma da quilometragem')
